@@ -17,7 +17,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url(/src/images/bg/body.jpg);
+    background-image: url(/images/bg/body.jpg);
 }
 
 a {
@@ -38,7 +38,7 @@ li {
 /*nav*/
 
 nav {
-    background-image: url(/src/images/texturas/nav.jpg);
+    background-image: url(/images/texturas/nav.jpg);
     border-bottom: 3px solid rgb(48, 48, 48);
     color: white;
     padding: 15px;
@@ -531,7 +531,7 @@ select {
 
 .card {
 
-    background-image: url(/src/images/texturas/cards.jpg);
+    background-image: url(/images/texturas/cards.jpg);
     width: 250px;
     height: 300px;
     display: flex;
