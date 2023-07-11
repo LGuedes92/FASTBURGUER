@@ -144,4 +144,4 @@ function gerarCartoesProdutos(categoriaSelecionada) {
 
 // Chamar a função para gerar os cartões de produto com base nos dados do LocalStorage e categoria inicial
 var categoriaSelecionada = document.getElementById('categ').value;
-onload.gerarCartoesProdutos(categoriaSelecionada);
+addEventListener ('onload', gerarCartoesProdutos(categoriaSelecionada));
