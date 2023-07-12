@@ -42,7 +42,7 @@ function cadastrarProdutos() {
   if (nome === '' || descricao === '' || categoria === '' || preco === '' || !imagem) {
     alert('Por favor, preencha todos os campos de cadastro e anexe uma imagem.');
   } else {
-alert('teste.')
+
     // Verificar e formatar o preço no padrão de moeda
     preco = preco.replace(',', '.'); // Substituir vírgula por ponto (ex: 15,00 -> 15.00)
     preco = parseFloat(preco).toFixed(2); // Converter para número e fixar em 2 casas decimais
@@ -85,36 +85,36 @@ function gerarCartoesProdutos(categoriaSelecionada) {
   var produtosCadastrados = JSON.parse(localStorage.getItem('produtos')) || [];
 
   // Filtrar os produtos pela categoria selecionada
-   const produtosFiltrados = produtosCadastrados.filter(function (produto) {
+  var produtosFiltrados = produtosCadastrados.filter(function (produto) {
     return produto.categoria === categoriaSelecionada;
   });
 
   // Limpar o contêiner de produtos
-  const produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
+  var produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
   produtosContainer.innerHTML = '';
 
   // Gerar cartões de produto com base nos dados filtrados
   produtosFiltrados.forEach(function (produto) {
-    const card = document.createElement('div');
+    var card = document.createElement('div');
     card.classList.add('card');
 
-    const img = document.createElement('img');
+    var img = document.createElement('img');
     img.src = produto.imagem;
     img.alt = 'Imagem do produto';
 
-    const h2 = document.createElement('h2');
+    var h2 = document.createElement('h2');
     h2.textContent = produto.nome;
 
-    const p = document.createElement('p');
+    var p = document.createElement('p');
     p.textContent = produto.descricao;
 
-    const precoSpan = document.createElement('span');
+    var precoSpan = document.createElement('span');
     precoSpan.textContent = 'Preço: R$ ' + produto.preco;
 
-    const adc = document.createElement('div');
+    var adc = document.createElement('div');
     adc.classList.add('adc');
 
-    const removerButton = document.createElement('button');
+    var removerButton = document.createElement('button');
     removerButton.innerHTML = '<ion-icon name="arrow-down-circle-outline"></ion-icon>Remover';
     removerButton.addEventListener('click', function () {
       card.remove();
@@ -143,5 +143,5 @@ function gerarCartoesProdutos(categoriaSelecionada) {
 }
 
 // Chamar a função para gerar os cartões de produto com base nos dados do LocalStorage e categoria inicial
-const categoriaSelecionada = document.getElementById('categ').value;
+var categoriaSelecionada = document.getElementById('categ').value;
 gerarCartoesProdutos(categoriaSelecionada);
