@@ -42,7 +42,7 @@ function cadastrarProdutos() {
   if (nome === '' || descricao === '' || categoria === '' || preco === '' || !imagem) {
     alert('Por favor, preencha todos os campos de cadastro e anexe uma imagem.');
   } else {
-
+alert('teste.')
     // Verificar e formatar o preço no padrão de moeda
     preco = preco.replace(',', '.'); // Substituir vírgula por ponto (ex: 15,00 -> 15.00)
     preco = parseFloat(preco).toFixed(2); // Converter para número e fixar em 2 casas decimais
