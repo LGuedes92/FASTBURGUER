@@ -33,11 +33,11 @@ Array.from(document.querySelectorAll('.init-hidden')).forEach((element) => {
 
 // Função para cadastrar uma nova promoção
 function cadastrarProdutos() {
-  var nome = document.getElementById('name').value;
-  var descricao = document.getElementById('desc').value;
-  var categoria = document.getElementById('categ').value;
-  var preco = document.getElementById('preco').value;
-  var imagem = document.getElementById('imagem').files[0];
+  const nome = document.getElementById('name').value;
+  const descricao = document.getElementById('desc').value;
+  const categoria = document.getElementById('categ').value;
+  const preco = document.getElementById('preco').value;
+  const imagem = document.getElementById('imagem').files[0];
 
   if (nome === '' || descricao === '' || categoria === '' || preco === '' || !imagem) {
     alert('Por favor, preencha todos os campos de cadastro e anexe uma imagem.');
