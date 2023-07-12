@@ -87,7 +87,7 @@ function gerarCartoesProdutos(categoriaSelecionada) {
   // Filtrar os produtos pela categoria selecionada
   // const produtosFiltrados = produtosCadastrados.filter(function (produto) {
    // return produto.categoria === categoriaSelecionada;
-  });
+  //});
 
   // Limpar o contêiner de produtos
   const produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
