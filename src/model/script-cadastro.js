@@ -85,36 +85,36 @@ function gerarCartoesProdutos(categoriaSelecionada) {
   var produtosCadastrados = JSON.parse(localStorage.getItem('produtos')) || [];
 
   // Filtrar os produtos pela categoria selecionada
-  var produtosFiltrados = produtosCadastrados.filter(function (produto) {
+  const produtosFiltrados = produtosCadastrados.filter(function (produto) {
     return produto.categoria === categoriaSelecionada;
   });
 
   // Limpar o contêiner de produtos
-  var produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
+  const produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
   produtosContainer.innerHTML = '';
 
   // Gerar cartões de produto com base nos dados filtrados
   produtosFiltrados.forEach(function (produto) {
-    var card = document.createElement('div');
+    const card = document.createElement('div');
     card.classList.add('card');
 
-    var img = document.createElement('img');
+    const img = document.createElement('img');
     img.src = produto.imagem;
     img.alt = 'Imagem do produto';
 
-    var h2 = document.createElement('h2');
+    const h2 = document.createElement('h2');
     h2.textContent = produto.nome;
 
-    var p = document.createElement('p');
+    const p = document.createElement('p');
     p.textContent = produto.descricao;
 
-    var precoSpan = document.createElement('span');
+    const precoSpan = document.createElement('span');
     precoSpan.textContent = 'Preço: R$ ' + produto.preco;
 
-    var adc = document.createElement('div');
+    const adc = document.createElement('div');
     adc.classList.add('adc');
 
-    var removerButton = document.createElement('button');
+    const removerButton = document.createElement('button');
     removerButton.innerHTML = '<ion-icon name="arrow-down-circle-outline"></ion-icon>Remover';
     removerButton.addEventListener('click', function () {
       card.remove();
