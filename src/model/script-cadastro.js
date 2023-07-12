@@ -90,8 +90,8 @@ function gerarCartoesProdutos(categoriaSelecionada) {
   });
 
   // Limpar o contêiner de produtos
-  const produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
-  produtosContainer.innerHTML = '';
+  //const produtosContainer = document.getElementById('produtos-container-' + categoriaSelecionada);
+ // produtosContainer.innerHTML = '';
 
   // Gerar cartões de produto com base nos dados filtrados
   produtosFiltrados.forEach(function (produto) {
