@@ -53,7 +53,7 @@ function cadastrarProdutos() {
     var novoProduto = {
       nome: nome,
       descricao: descricao,
-      categorias: categoria,
+      categoria: categoria,
       preco: preco,
       imagem: URL.createObjectURL(imagem),
     };
@@ -86,7 +86,7 @@ function gerarCartoesProdutos(categoriaSelecionada) {
 
   // Filtrar os produtos pela categoria selecionada
   var produtosFiltrados = produtosCadastrados.filter(function (produto) {
-    return produto.categorias === categoriaSelecionada;
+    return produto.categoria === categoriaSelecionada;
   });
 
   // Limpar o contêiner de produtos
